@@ -17,7 +17,7 @@ def index():
             return "<h1>URL NOT VALID</h1>"
         else:
             os.system(f"youtube-dl  {vidurl} -o vids/{name_of_vid}.mp4")
-            return f"<a href='/vids/{name_of_vid}.mp4>{name_of_vid}</a>'"
+            return f"<h1><a href='/vids/{name_of_vid}.mp4'>{name_of_vid}</a><h1>"
 
 
 @app.route("/vids/<path:path>")
